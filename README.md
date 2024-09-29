@@ -5,6 +5,7 @@ Clone repository ini ke mesin lokal Anda menggunakan Git:
 ```
 git clone https://github.com/egbertjandra/bike-sharing-dicoding-project.git
 cd bike-sharing-dicoding-project
+cd dashboard
 ```
 
 ## 2. Install Required Packages
