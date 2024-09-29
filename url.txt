@@ -1,1 +1,1 @@
-bike-sharing-dicoding-project-egbert-ml53.streamlit.app
+dashboard-egbert.streamlit.app
