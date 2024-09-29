@@ -47,7 +47,8 @@ with col2:
     st.write("### Average Bike Rentals by Season and Year:")
     average_season_year = bike_hour.groupby(['season', 'yr'])['cnt'].mean().unstack().fillna(0)
     plt.figure(figsize=(10, 5))
-    average_season_year.plot(kind='bar', stacked=True, ax=plt.gca(), colormap='orange')
+    colors = ['#ff9999', '#66b3ff']  # Warna untuk 2011 dan 2012
+    average_season_year.plot(kind='bar', stacked=True, ax=plt.gca(), color=colors)
     plt.title("Average Bike Rentals by Season and Year (Stacked)")
     plt.xlabel("Season")
     plt.ylabel("Average Rentals")
