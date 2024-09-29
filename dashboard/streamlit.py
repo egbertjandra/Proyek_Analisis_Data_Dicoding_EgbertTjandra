@@ -45,10 +45,10 @@ with col1:
     
 with col2:
     st.write("### Average Bike Rentals by Season and Year:")
+    average_season_year = bike_hour.groupby(['season', 'yr'])['cnt'].mean().unstack().fillna(0)
     plt.figure(figsize=(10, 5))
-    average_season_year = bike_hour.groupby(['season', 'yr'])['cnt'].mean().reset_index()
-    sns.barplot(data=average_season_year, x='season', y='cnt', hue='yr', palette='magma')  # Perbaiki 'count' menjadi 'cnt'
-    plt.title("Average Bike Rentals by Season and Year")
+    average_season_year.plot(kind='bar', stacked=True, ax=plt.gca(), colormap='magma')
+    plt.title("Average Bike Rentals by Season and Year (Stacked)")
     plt.xlabel("Season")
     plt.ylabel("Average Rentals")
     st.pyplot(plt)
