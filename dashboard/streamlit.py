@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #Import data
-bike_hour = pd.read_csv("bike_hour.csv")
+bike_hour = pd.read_csv("dashboard/bike_hour.csv")
 
 #Judul dashboard
 st.title("Bike Sharing Data Analysis")
