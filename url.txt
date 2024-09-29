@@ -1,1 +1,1 @@
-url
+bike-sharing-dicoding-project--egbert-a2y2ewmuqvr2e5isgqtc9t.streamlit.app
