@@ -101,6 +101,6 @@ with st.expander("Tentang Data dan Insight Visualisasi"):
         """Dataset ini berisi informasi tentang penyewaan sepeda dari sistem berbagi 
         sepeda selama tahun 2011 dan 2012, mencakup berbagai fitur seperti musim, kondisi cuaca, suhu, dan waktu dalam setahun.
         Analisis menunjukkan bahwa jumlah penyewaan dipengaruhi oleh faktor-faktor tersebut, dengan peningkatan signifikan selama musim panas dan cuaca cerah.
-        Insight ini penting bagi pengelola untuk merencanakan penggunaan armada sepeda dan mengoptimalkan kegiatan promosi, sehingga dapat meningkatkan efisiensi operasional dan kepuasan pelanggan."""
+        Insight ini penting bagi pengelola toko rental sepeda untuk mengoptimalkan penyewaan, sehingga dapat meningkatkan operasional bisnis dan kepuasan pelanggan."""
     )
 
