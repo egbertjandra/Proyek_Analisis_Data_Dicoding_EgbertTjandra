@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #Import data
-bike_hour = pd.read_csv(r"D:\Bangkit Project\Streamlit Projek Analisis Data\bike_hour.csv")
+bike_hour = pd.read_csv(r"bike_hour.csv")
 
 #Judul dashboard
 st.title("Bike Sharing Data Analysis")
