@@ -35,7 +35,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.write("### Average Bike Rentals by Season:")
     plt.figure(figsize=(10, 5))
-    average_season = bike_hour.groupby('season')['count'].mean().reset_index()
+    average_season = bike_hour.groupby('season')['cnt'].mean().reset_index()
     sns.barplot(data=average_season, x='season', y='count', palette='viridis')
     plt.title("Average Bike Rentals by Season")
     plt.xlabel("Season")
@@ -45,7 +45,7 @@ with col1:
 with col2:
     st.write("### Average Bike Rentals by Season and Year:")
     plt.figure(figsize=(10, 5))
-    average_season_year = bike_hour.groupby(['season', 'yr'])['count'].mean().reset_index()
+    average_season_year = bike_hour.groupby(['season', 'yr'])['cnt'].mean().reset_index()
     sns.barplot(data=average_season_year, x='season', y='count', hue='yr', palette='magma')
     plt.title("Average Bike Rentals by Season and Year")
     plt.xlabel("Season")
