@@ -31,7 +31,7 @@ with st.container():
     st.write(bike_hour.head())
 
 # Membuat visualisasi dalam bentuk kolom
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.write("### Average Bike Rentals by Season:")
@@ -55,6 +55,18 @@ with col2:
     plt.xticks(ticks=[0, 1, 2, 3], labels=['Spring', 'Summer', 'Fall', 'Winter'], rotation=0)
     plt.ylabel("Average Rentals")
     plt.legend(title='Year', labels=['2011', '2012'])
+    st.pyplot(plt)
+    
+with col3:  # Kolom ketiga untuk visualisasi baru
+    st.write("### Average Bike Rentals by Weather Condition (Aug - Dec 2011):")
+    weather_data = bike_hour[(bike_hour['yr'] == 0) & (bike_hour['mnth'] >= 8) & (bike_hour['mnth'] <= 12)]  # Tahun 2011
+    average_weather = weather_data.groupby('weathersit')['cnt'].mean().reset_index()
+    plt.figure(figsize=(10, 5))
+    sns.barplot(data=average_weather, x='weathersit', y='cnt', palette='pastel')  # Menggunakan palette pastel
+    plt.title("Average Bike Rentals by Weather Condition (Aug - Dec 2011)")
+    plt.xlabel("Weather Condition")
+    plt.xticks(ticks=[0, 1, 2], labels=['Clear', 'Mist + Cloudy', 'Light Snow + Rain'], rotation=45)
+    plt.ylabel("Average Rentals")
     st.pyplot(plt)
 
 # Memfilter data
