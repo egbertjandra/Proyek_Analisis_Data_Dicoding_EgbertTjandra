@@ -40,6 +40,7 @@ with col1:
     sns.barplot(data=average_season, x='season', y='cnt', palette='viridis')  # Perbaiki 'count' menjadi 'cnt'
     plt.title("Average Bike Rentals by Season")
     plt.xlabel("Season")
+    plt.xticks(ticks=[0, 1, 2, 3], labels=['Spring', 'Summer', 'Fall', 'Winter'])
     plt.ylabel("Average Rentals")
     st.pyplot(plt)  
     
@@ -51,6 +52,7 @@ with col2:
     average_season_year.plot(kind='bar', stacked=True, ax=plt.gca(), color=colors)
     plt.title("Average Bike Rentals by Season and Year (Stacked)")
     plt.xlabel("Season")
+    plt.xticks(ticks=[0, 1, 2, 3], labels=['Spring', 'Summer', 'Fall', 'Winter'], rotation=0)
     plt.ylabel("Average Rentals")
     plt.legend(title='Year', labels=['2011', '2012'])
     st.pyplot(plt)
