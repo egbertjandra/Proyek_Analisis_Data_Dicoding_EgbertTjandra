@@ -1,11 +1,22 @@
-# Bike Sharing Dashboard 🚴‍♂️
+# Bike Sharing Dashboard 
 
-## Setup Environment
-### 1. Clone the Repository
-Clone this repository to your local machine using Git:
-
-```bash
+## 1. Clone Repository
+Clone repository ini ke mesin lokal Anda menggunakan Git:
+```
 git clone https://github.com/egbertjandra/bike-sharing-dicoding-project.git
 cd bike-sharing-dicoding-project
+```
 
-### 2. Install Required Packages
+## 2. Install Required Packages
+```
+pip install -r requirements.txt
+```
+
+## 3. Run steamlit app
+```
+streamlit run streamlit.py
+```
+
+
+
+
