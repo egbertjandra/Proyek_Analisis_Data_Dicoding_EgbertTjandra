@@ -5,13 +5,17 @@ Created on Sun Sep 29 13:24:46 2024
 @author: LENOVO
 """
 
+import os 
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+current_directory = os.path.dirname(__file__)
+csv_file_path = os.path.join(current_directory, 'bike_hour.csv')
+
 #Import data
-bike_hour = pd.read_csv("dashboard/bike_hour.csv")
+bike_hour = pd.read_csv(csv_file_path)
 
 #Judul dashboard
 st.title("Bike Sharing Data Analysis")
