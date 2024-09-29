@@ -1,1 +1,1 @@
-bike-sharing-dicoding-project--egbert-a2y2ewmuqvr2e5isgqtc9t.streamlit.app
+bike-sharing-dicoding-project-egbert-ml53.streamlit.app
