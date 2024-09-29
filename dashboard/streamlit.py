@@ -60,22 +60,24 @@ filter_data = bike_hour[(bike_hour['yr'] == (year - 2011))]
 tab1, tab2 = st.tabs(["Monthly Rentals", "Yearly Overview"])
 
 with tab1:
-    st.write(f"### Monthly Rentals for Year {year}:")
+    st.write(f"### Average Rentals for Year {year}:")
     filtered_data = bike_hour[bike_hour['yr'] == (year - 2011)]
     plt.figure(figsize=(10, 5))
-    sns.countplot(data=filtered_data, x='mnth', palette='coolwarm')
-    plt.title(f"Total Rentals by Month in {year}")
+    average_monthly = filtered_data.groupby('mnth')['cnt'].mean().reset_index()
+    sns.barplot(data=average_monthly, x='mnth', y='cnt', palette='coolwarm')  # Menggunakan rata-rata
+    plt.title(f"Average Rentals by Month in {year}")
     plt.xlabel("Month")
-    plt.ylabel("Total Rentals")
+    plt.ylabel("Average Rentals")
     st.pyplot(plt)
 
 with tab2:
-    st.write("### Yearly Overview:")
+    st.write("### Average Rentals by Year:")
     plt.figure(figsize=(10, 5))
-    sns.countplot(data=bike_hour, x='yr', palette='Set1')
-    plt.title("Total Rentals by Year")
+    average_yearly = bike_hour.groupby('yr')['cnt'].mean().reset_index()
+    sns.barplot(data=average_yearly, x='yr', y='cnt', palette='Set1')  # Menggunakan rata-rata
+    plt.title("Average Rentals by Year")
     plt.xlabel("Year")
-    plt.ylabel("Total Rentals")
+    plt.ylabel("Average Rentals")
     st.pyplot(plt)
 
 # Expander
