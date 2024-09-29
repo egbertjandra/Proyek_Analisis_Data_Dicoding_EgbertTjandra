@@ -33,21 +33,23 @@ with st.container():
 col1, col2 = st.columns(2)
 
 with col1:
-    st.write("### Total Rentals by Season:")
+    st.write("### Average Bike Rentals by Season:")
     plt.figure(figsize=(10, 5))
-    sns.countplot(data=bike_hour, x='season', palette='viridis')
-    plt.title("Total Rentals by Season")
+    average_season = bike_hour.groupby('season')['count'].mean().reset_index()
+    sns.barplot(data=average_season, x='season', y='count', palette='viridis')
+    plt.title("Average Bike Rentals by Season")
     plt.xlabel("Season")
-    plt.ylabel("Total Rentals")
+    plt.ylabel("Average Rentals")
     st.pyplot(plt)  
     
 with col2:
-    st.write("### Total Rentals by Weather:")
+    st.write("### Average Bike Rentals by Season and Year:")
     plt.figure(figsize=(10, 5))
-    sns.countplot(data=bike_hour, x='weathersit', palette='magma')
-    plt.title("Total Rentals by Weather Condition")
-    plt.xlabel("Weather Condition")
-    plt.ylabel("Total Rentals")
+    average_season_year = bike_hour.groupby(['season', 'yr'])['count'].mean().reset_index()
+    sns.barplot(data=average_season_year, x='season', y='count', hue='yr', palette='magma')
+    plt.title("Average Bike Rentals by Season and Year")
+    plt.xlabel("Season")
+    plt.ylabel("Average Rentals")
     st.pyplot(plt)
 
 #Memfilter data
