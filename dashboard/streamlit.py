@@ -47,10 +47,11 @@ with col2:
     st.write("### Average Bike Rentals by Season and Year:")
     average_season_year = bike_hour.groupby(['season', 'yr'])['cnt'].mean().unstack().fillna(0)
     plt.figure(figsize=(10, 5))
-    average_season_year.plot(kind='bar', stacked=True, ax=plt.gca(), colormap='magma')
+    average_season_year.plot(kind='bar', stacked=True, ax=plt.gca(), colormap='orange')
     plt.title("Average Bike Rentals by Season and Year (Stacked)")
     plt.xlabel("Season")
     plt.ylabel("Average Rentals")
+    plt.legend(title='Year', labels=['2011', '2012'])
     st.pyplot(plt)
 
 # Memfilter data
