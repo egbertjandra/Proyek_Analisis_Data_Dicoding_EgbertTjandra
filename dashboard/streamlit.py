@@ -98,13 +98,9 @@ with tab2:
 # Expander
 with st.expander("Tentang Data dan Insight Visualisasi"):
     st.write(
-        """Dataset ini berisi informasi tentang penyewaan sepeda, 
-        yang dikategorikan berdasarkan berbagai fitur seperti 
-        musim, kondisi cuaca, dan waktu dalam setahun. Dari visualisasi yang 
-        tersedia, kita dapat melihat bahwa penyewaan sepeda sangat dipengaruhi 
-        oleh cuaca dan musim. Misalnya, penyewaan cenderung lebih tinggi 
-        selama musim panas dan pada saat cuacanya baik. 
-        Insight ini dapat membantu dalam perencanaan pengelolaan sepeda 
-        sewa."""
+        """Dataset ini berisi informasi tentang penyewaan sepeda dari sistem berbagi 
+        sepeda selama tahun 2011 dan 2012, mencakup berbagai fitur seperti musim, kondisi cuaca, suhu, dan waktu dalam setahun.
+        Analisis menunjukkan bahwa jumlah penyewaan dipengaruhi oleh faktor-faktor tersebut, dengan peningkatan signifikan selama musim panas dan cuaca cerah.
+        Insight ini penting bagi pengelola untuk merencanakan penggunaan armada sepeda dan mengoptimalkan kegiatan promosi, sehingga dapat meningkatkan efisiensi operasional dan kepuasan pelanggan."""
     )
 
